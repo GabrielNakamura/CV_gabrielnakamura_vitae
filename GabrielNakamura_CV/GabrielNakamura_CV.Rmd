@@ -1,0 +1,348 @@
+---
+name: Gabriel
+surname:  Nakamura
+position: "Posdoc"
+address: "Universidade de São Paulo, Instituto de Biociências, Departamento de Ecologia, São Paulo, Brasil"
+www: gabrielnakamura.netlify.app
+pronouns: ele/dele
+email: "gabriel.nakamura.souza@gmail.com"
+github: GabrielNakamura
+orcid: 0000-0002-5144-5312
+googlescholar: Gabriel Nakamura
+researchgate: Gabriel Nakamura
+date: January 2025 #"`r format(Sys.time(), '%B %Y')`"
+output:
+  vitae::awesomecv:
+  page_total: true
+---
+
+```{r yaml,echo=F,include=F}
+#yaml options
+# linkedin:
+# headcolor:
+# aboutme
+```
+
+\footnotesize
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae);
+library(tibble)
+library(magrittr)
+library(here)
+library(readr)
+```
+
+# Linhas de pesquisa
+
+```{r INTERESTS}
+interests <- tribble(
+  ~macro, ~micro,
+  "Métodos quantitativos", "Métodos quantitativos em ecologia de comunidades, macroevolução e biogeografia",
+  "Desenvolvimento de ferramentas estatísticas",  "Desenvolvimento de pacotes em R em ecologia filogenética, macroevolução e quantificação da diversidade",
+  "Ciência de dados aplicado a biodiversidade", "Raspagem de dados de sítios de informações em biodiversidade; Síntese de grandes bases de dados em biodiversidade; Aplicativos interativos para manipulação e vizualização de dados",
+  "Ferramentas computacionais em ciência aberta", "Uso de controle de versão e plataformas colaborativas para promoção de reprodutibiidade em estudos de biodiversidade", 
+  "Diversidade, Equidade e Inclusão (DEI)", "Estudos bibliométricos para embasar ações em DEI"
+)
+
+interests %>% 
+  detailed_entries(
+    with = macro,
+    what = micro)
+```
+
+# Formação
+
+```{r}
+edu <- tribble(
+  ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
+  "Universidade Federal do Rio Grande do Sul", "2015", "2019", "Doutorado em Ecologia [documento 1]", "Porto Alegre, Brasil", list("Título: Diversidade biológica: problemas, soluções e novas propostas", "Prêmio de melhor tese do PPG Ecologia UFRGS", "Indicação Prêmio Capes de Teses"),
+  "Universidade Federal do Mato Grosso do Sul", "2012", "2014", "Mestre em Ecologia e Conservação [documento 2]", "Campo Grande, Brasil", "Título: Comunidade de peixes de riacho: uma abordagem cienciométrica e empírica",
+  "Universidade Federal de Mato Grosso do Sul", "2008", "2011", "Licenciatura em Ciências Biológicas", "Três Lagoas, Brasil", "Ecologia de comunidades de peixes de lagoas marginais"
+)
+```
+
+```{r EDUCATION}
+edu %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    where = glue::glue("{startYear} --> {endYear}",.na = ""),
+    when = where)
+```
+
+# Experiência docente
+
+```{r}
+teach <- tribble(
+  ~title, ~unit, ~year, ~where, ~detail,
+    "Professor substituto", "Universidade Federal do Ceará", "2022", "Fortaleza, Brasil", list("Professor das disciplinas de Ecologia Básica, Biogeografia, Ecologia e Legislação Ambiental [doc X]"),
+  
+    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade de São Paulo", "2023 & 2024", "São Paulo, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia USP"),
+  
+    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade Federal de Goiás", "2023", "Goiânia, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia e Evolução da UFG"),
+  
+  "Métodos quantitativos", "Universidade Federal do Rio Grande do Sul", "2016 & 2017", "Porto Alegre, Brazil", list("Colaborador na disciplina de graduação em Ciências Biológicas UFRGS", "2 months (May-June): 4h per week")
+)
+  
+    
+```
+
+```{r LECTURER}
+teach %>% slice(1:5) %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = year,
+    when = where)
+```
+
+
+## Workshops e Cursos de curta duração
+
+```{r}
+workshop <- tribble(
+  ~title, ~unit, ~year, ~where, ~detail,
+   "Version control using git and GitHub", "University of Toronto", "2023", "workshop remoto",
+  list("Curso de curta duração ministrado para estudantes de pós-graduação da Univerisidade de Toronto, 4h")
+  )
+```
+
+```{r}
+workshop %>% 
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = year,
+    when = where)
+```
+
+
+
+# Prêmios
+
+```{r}
+fellowship <- award <- tribble(
+  ~title, ~unit, ~endYear, ~detail, ~value,
+  "Melhor apresentação oral CBBE", "Sociedade Brasileira de Biologia Evolutiva", 2024, "Prêmio de melhor apresentação oral no I Congresso Brasileiro de Biologia Evolutiva", "sem premiação em dinheiro",
+  "Melhor tese PPG Ecologia UFRGS", "Programa de pós-graduação em Ecologia UFRGS", 2020, "Melhor tese defendida no ano de 2019 no programa de pós graduação em Ecologia da UFRGS", "Indicação ao prêmio CAPES de Teses",
+  "Terceiro colocado no Ebbe Nielsen Prize", "GBIF, Holanda", 2021, "Terceiro colocado no desafio de Ciência de dados utilizando dados da plataforma GBIF", "$5.000 EUR",
+  "Top-downloaded paper Austral Ecology", "Wiley", 2020, "Paper entre um dos mais visualizados na revista Austral Ecology entre o período de 2018-2019", "sem premiação em dinheiro"
+)
+```
+
+```{r}
+fellowship %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{endYear}",.na = ""),
+    where= value)
+```
+
+
+# Publicações
+
+22 publicações revisadas por pares (9 publicações como autor principal); 3 manuscritos em preparação; 5 manuscritos como pré-print, sendo apenas um não publicado; 2 materiais de divulgação em mídia digital; Sítio eletrônico com materiais didáticos aberto sobre ferramentas computacionais para organização e gestão de dados e ciência aberta; 5 pacotes estatísticos em linguagem R, sendo 3 como autor e mantenedor principal, 2 deles depositados na CRAN.
+
+**Google Scholar Citations (Janeiro de 2025): 202; índice H 9; índice i10 8.**
+
+*As citações dos trabalhos estão de acordo com o estilo da plataforma Google Scholar. Os links direcionam para os papers em suas plataformas originais
+
+```{r PEER-REVIEWED, eval=T}
+# esta desatualizado, falta o artigo EcoEvoRxiv
+bibliography_entries("Publications_personal.bib") %>%
+  arrange(desc(issued))
+```
+
+## Preprints
+
+*Artigos abertos hospedados em plataformas de preprint, sem revisão por pares
+
+```{r PREPRINT, eval=T}
+bibliography_entries("preprint.bib") %>%
+  arrange(desc(issued))
+```
+
+
+## Capítulo de livros
+
+```{r BOOK_CHAPTERS, eval=F}
+bibliography_entries("capitulos_livros.bib") %>%
+  arrange(desc(issued))
+```
+
+
+## Pacotes estatísticos
+
+
+## Códigos e repositórios de dados
+
+```{r DATA_CODE_REPO, eval=F}
+bibliography_entries("repo_dados.bib") %>%
+  arrange(desc(issued))
+```
+
+# Extensão
+
+
+# Palestras
+
+```{r}
+inv.talk <- tribble(
+  ~title, ~unit, ~year, ~where,
+  
+)
+
+```
+
+## Palestras como convidado
+
+```{r}
+inv.talk %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+
+# Experiência profissional
+
+## Membro de banca de defesa
+
+```{r}
+jury <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "xxx", "xxx", 2023, "xxx")
+
+jury %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+## Comitê de acompanhamento
+
+```{r}
+committee1 <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "xxx", "xx", "xx", "xx"
+)
+
+committee1 %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+## Comitês universitários
+
+```{r}
+committee2 <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "xxx", "xx", "xx", "xx"
+)
+
+committee2 %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+
+## Membro de corpo editorial
+
+```{r}
+editor <- tribble(
+  ~title, ~unit, ~year,
+  "Austral Ecology", "Editor associado", "2023 - Present")
+
+editor %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    where= year)
+```
+
+## Serviços academicos - revisões
+
+*Revisão para XX revistas científicas. Avaliado como ["Excelent Reviewer"]() na plataforma Publons
+
+*Revisor de projeto de fomento para National Science Poland
+
+```{r, eval=F}
+review <- tribble(
+    ~title, ~year,
+    "Ecography",  "2024",
+    "Austral Ecology",  "2021-2022", 
+    "Global Ecology and Biogeography", "2020",
+    "Methods in Ecology and Evolution", "2014,2019,2021",
+    "PNAS", "2018",
+    "Journal of Biogeography",  "2014",
+    "Biotemas", "2010")
+review %>%
+  detailed_entries(
+    with = title,
+    where= year)
+```
+
+
+# Afiliações em sociedades científicas
+
+```{r}
+affi <- tribble(
+  ~title, ~unit, ~year,
+  "ESA", "Ecological Society of America", "2022-2023",
+  "SSE", "Society of Systematics and Evolution","2022-2023",
+  "SBEE", "Sociedade Brasileira de Biologia Evolutiva","2024-Atual")
+
+affi %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    where= year)
+```
+
+# Idiomas
+
+```{r LANG}
+lang <- tribble(
+  ~lang, ~level, ~detail,
+  "Português", "Nativo", "",
+  "Inglês", "Avançado", "TOEFL ITP total (2021): 630 of 677",
+  "Spanish", "Intermediário", "")
+
+lang %>%
+  detailed_entries(
+    with = lang,
+    what = detail,
+    where= level)
+```
+
+# Linguagens de programação
+
+```{r}
+comp <- tribble(
+  ~frequency, ~programs,
+  "Diário", "R, Rmarkdown/Quarto, Git, GitHub, bash em servidores para computação em alta performance MacOS/Linux",
+  "Seldom", "Python, HTML, CSS, Latex")
+
+comp %>% 
+  detailed_entries(
+    with = frequency,
+    what = programs)
+```
+

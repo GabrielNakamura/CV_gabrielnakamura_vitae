@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.31)  2 FEB 2025 16:08
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.31)  9 FEB 2025 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -804,34 +804,46 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <8> not availa
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on input line 152.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
 (Font)              scaled to size 8.0pt on input line 152.
+LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
+(Font)              scaled to size 9.0pt on input line 203.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 194.
+(Font)              scaled to size 12.0pt on input line 210.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 194.
+(Font)              scaled to size 12.0pt on input line 210.
 
 
 [1
 
 ]
-LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 230.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 244.
+(Font)              scaled to size 9.0pt on input line 220.
 
-
-[2]
-Underfull \hbox (badness 1655) in paragraph at lines 378--378
+Underfull \hbox (badness 1655) in paragraph at lines 354--354
 []|\TU/SourceSansPro(0)/m/n/9 Nakamura, G., Vicentin, W., & Súarez, Y. R. (2021). Taxonomic and phylogenetic beta diversity in headwater stream fish
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 459.
+
+[2]
+Overfull \hbox (3.44168pt too wide) in paragraph at lines 470--476
+[]\TU/SourceSansPro(0)/m/n/9 NAKAMURA, GABRIEL; MEYER, L.. Participação em banca de Livia Frateles. Lacunas Linneana e Darwiniana e padrões espaço-temporais
+ []
 
 
 
+LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 524.
 [3]
 
-[4] (./GabrielNakamura_CV.aux)
+Package hyperref Warning: Suppressing link with empty target on input line 550.
+
+
+
+LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
+(Font)              scaled to size 16.0pt on input line 589.
+[4]
+
+[5] (./GabrielNakamura_CV.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -843,12 +855,12 @@ Package rerunfilecheck Info: File `GabrielNakamura_CV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32983 strings out of 475846
- 678100 string characters out of 5773206
- 1246916 words of memory out of 5000000
- 55358 multiletter control sequences out of 15000+600000
+ 32995 strings out of 475846
+ 678501 string characters out of 5773206
+ 1246060 words of memory out of 5000000
+ 55370 multiletter control sequences out of 15000+600000
  564499 words of font info for 138 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,11n,135p,556b,643s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,12n,135p,556b,643s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on GabrielNakamura_CV.pdf (4 pages).
+Output written on GabrielNakamura_CV.pdf (5 pages).

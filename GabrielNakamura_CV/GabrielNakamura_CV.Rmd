@@ -10,7 +10,7 @@ github: GabrielNakamura
 orcid: 0000-0002-5144-5312
 googlescholar: Gabriel Nakamura
 researchgate: Gabriel Nakamura
-date: January 2025 #"`r format(Sys.time(), '%B %Y')`"
+date: Fevereiro 2025 #"`r format(Sys.time(), '%B %Y')`"
 output:
   vitae::awesomecv:
   page_total: true
@@ -73,57 +73,8 @@ edu %>%
     when = where)
 ```
 
-# Experiência docente
 
-```{r}
-teach <- tribble(
-  ~title, ~unit, ~year, ~where, ~detail,
-    "Professor substituto", "Universidade Federal do Ceará", "2022", "Fortaleza, Brasil", list("Professor das disciplinas de Ecologia Básica, Biogeografia, Ecologia e Legislação Ambiental [doc X]"),
-  
-    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade de São Paulo", "2023 & 2024", "São Paulo, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia USP"),
-  
-    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade Federal de Goiás", "2023", "Goiânia, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia e Evolução da UFG"),
-  
-  "Métodos quantitativos", "Universidade Federal do Rio Grande do Sul", "2016 & 2017", "Porto Alegre, Brazil", list("Colaborador na disciplina de graduação em Ciências Biológicas UFRGS", "2 months (May-June): 4h per week")
-)
-  
-    
-```
-
-```{r LECTURER}
-teach %>% slice(1:5) %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    why = detail,
-    where = year,
-    when = where)
-```
-
-
-## Workshops e Cursos de curta duração
-
-```{r}
-workshop <- tribble(
-  ~title, ~unit, ~year, ~where, ~detail,
-   "Version control using git and GitHub", "University of Toronto", "2023", "workshop remoto",
-  list("Curso de curta duração ministrado para estudantes de pós-graduação da Univerisidade de Toronto, 4h")
-  )
-```
-
-```{r}
-workshop %>% 
-  detailed_entries(
-    with = title,
-    what = unit,
-    why = detail,
-    where = year,
-    when = where)
-```
-
-
-
-# Prêmios
+# Distinções
 
 ```{r}
 fellowship <- award <- tribble(
@@ -154,6 +105,8 @@ fellowship %>%
 
 *As citações dos trabalhos estão de acordo com o estilo da plataforma Google Scholar. Os links direcionam para os papers em suas plataformas originais
 
+## Artigos publicados em periódicos científicos
+
 ```{r PEER-REVIEWED, eval=T}
 # esta desatualizado, falta o artigo EcoEvoRxiv
 bibliography_entries("Publications_personal.bib") %>%
@@ -169,17 +122,22 @@ bibliography_entries("preprint.bib") %>%
   arrange(desc(issued))
 ```
 
-
-## Capítulo de livros
+## Capítulos de livros
 
 ```{r BOOK_CHAPTERS, eval=F}
 bibliography_entries("capitulos_livros.bib") %>%
   arrange(desc(issued))
 ```
 
+1. SOUZA, G. N.. Aprender (não) é preciso: predadores necessitam de aprendizado para evitação de presas aposemáticas no Pantanal?. In: Wellington Santos Fava; Claudenice Faxina Zucca; Milena Delatorre; Francisco Valente-Neto; Marciel Elio Rodrigues; Gabriel Arvelino de Paula; Andréa Cardoso de Araújo; Erich Fischer; Fábio de Oliveira Roque; Rudi Ricardo Laps. (Org.). Ecologia do Pantanal. 1ed.Campo Grande: Editora UFMS, 2014, p. 271-279.
 
 ## Pacotes estatísticos
 
+1. [FishPhyloMaker. 2021](https://cran.r-project.org/web/packages/FishPhyloMaker/index.html) Pacote em R para produção de filogenias síntese para peixes ósseos.
+
+2. [NaturaList. 2024](https://cran.r-project.org/web/packages/naturaList/index.html) Pacote em R para classificação da qualidade de dados de ocorrência de espécies.
+
+3. [Herodotools. 2024](https://gabrielnakamura.github.io/Herodotools/) Pacote em R contendo métodos estatísticos para inferências de biogeografia histórica e macroevolução.
 
 ## Códigos e repositórios de dados
 
@@ -188,8 +146,150 @@ bibliography_entries("repo_dados.bib") %>%
   arrange(desc(issued))
 ```
 
-# Extensão
+# Experiência docente
 
+```{r}
+teach <- tribble(
+  ~title, ~unit, ~year, ~where, ~detail,
+    "Professor substituto", "Universidade Federal do Ceará", "2022", "Fortaleza, Brasil", list("Professor das disciplinas de Ecologia Básica, Biogeografia, Ecologia e Legislação Ambiental [doc X]"),
+  
+    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade de São Paulo", "2023 & 2024", "São Paulo, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia USP"),
+  
+    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade Federal de Goiás", "2023", "Goiânia, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia e Evolução da UFG"),
+  
+  "Métodos quantitativos", "Universidade Federal do Rio Grande do Sul", "2016 & 2017", "Porto Alegre, Brazil", list("Colaborador na disciplina de graduação em Ciências Biológicas UFRGS", "2 months (May-June): 4h per week")
+)
+  
+    
+```
+
+```{r LECTURER}
+teach %>% slice(1:5) %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = year,
+    when = where)
+```
+
+## Orientações
+
+1. Lucas Cortez. Como a suficiência amostral e o poder do teste afetam nossa percepção sobre o impacto antrópico na diversidade alfa. Início: 2020. Dissertação (Mestrado em Ecologia) - Universidade Federal do Rio Grande do Sul, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. (Coorientador).
+
+2. Lívia Frateles. Global patterns of diversity and knowledge shortfalls in Serpentes. Início: 2024. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. (Coorientador).
+
+## Bancas de defesa
+
+1. NAKAMURA, GABRIEL; VIEIRA, M.. Participação em banca de Luiz Gabriel Ferreira. Modelando os efeitos da história evolutiva na estrutura e papel das espécies em redes mutualísticas. 2023. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás.
+
+2. NAKAMURA, GABRIEL; MEYER, L.. Participação em banca de Livia Frateles. Lacunas Linneana e Darwiniana e padrões espaço-temporais no conhecimento biológico de cobras corais do Novo Mundo (Serpentes: Elapidae). 2023. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás.
+
+3. Villalobos, F; BINI, L. M.; Nakamura, G.. Participação em banca de Daisy Jorge. VARIAÇÃO GEOGRÁFICA DA DIMENSIONALIDADE DE AVES NA MATA ATLÂNTICA. 2020. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás.
+
+4. Nakamura, G.; DUARTE, L. D. S.. Participação em banca de Jhonny Guedes. rends, biases and opportunities in terrestrial vertebrate biodiversity research. 2024. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás.
+
+5. NAKAMURA, GABRIEL; CARVALHO, P.; BORTOLINI, J. C.; LANSAC-TOHA, F. M.. Participação em banca de Gisele Moreira dos Santos. Dimensionalidade da biodiversidade de comunidades de insetos em riachos. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás.
+
+6. Nakamura, G.. Participação em banca de Matheus Moroti. Padrões e processos macroevolutivos na origem e diversificação de vertebrados terrestres da Floresta Atlântica. 2023. Tese (Doutorado em Ecologia e Conservação) - Universidade Federal de Mato Grosso do Sul.
+
+7. Nakamura, G.. Participação em banca de Matheus Moroti. Padrões e processos macroevolutivos na origem e diversificação de vertebrados terrestres da Floresta Atlântica. 2023. Tese (Doutorado em Ecologia e Conservação) - Universidade Federal de Mato Grosso do Sul.
+
+8. NAKAMURA, GABRIEL; BANDEIRA, K.; MACIEL, N.; CANDEIRO, C. R. A.. Participação em banca de Livia Motta Gil. LACUNAS DE CONHECIMENTO E PADRÕES MACROECOLÓGICOS EM DINOSSAUROS. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás.
+
+9. NAKAMURA, GABRIEL; TERRIBILE, L. C.; PEREIRA, M. J. R.; WEBER, M. M.; Villalobos, F. Participação em banca de Egon Luis Vilela do Valle. Dinâmicas de Nicho e Distribuição Geográfica em Chiroptera. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás.
+
+## Workshops e Cursos de curta duração
+
+```{r}
+workshop <- tribble(
+  ~title, ~unit, ~year, ~where, ~detail,
+   "Version control using git and GitHub", "University of Toronto", "2023", "workshop remoto",
+  list("Curso de curta duração ministrado para estudantes de pós-graduação da Univerisidade de Toronto, 4h")
+  )
+```
+
+```{r}
+workshop %>% 
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = year,
+    when = where)
+```
+
+
+# Administração acadêmica/Experiência profissional não docente
+
+## Estágio pós-doutoral
+
+```{r}
+posdoc <- tribble(
+  ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
+  "Universidade Federal do Rio Grande do Sul", "2019", "2020", "Posdoc Laboratório de Ecologia Filogenética e Funcional", "Porto Alegre, Brasil", list("Desenvolvimento de ferramentas numéricas em biogeografia histórica e macroevolução"),
+  "Texas A&M University", "2022", "2023", "Posdoc com financiamento NSF do laboratório de Biogeografia", "Corpus Christi, Estados Unidos", "Desenvolvimento e melhoria do pacote em R phyloregion",
+  "Universidade Federal de Goiás", "2023", "2024", "Posdoc do INCT Ecologia, Evolução e Conservação da Biodiversidade", "Goiânia, Brasil", "Projeto: Investigando lacunas de conhecimento em múltiplas dimensões da diversidade",
+  "Universidade de São Paulo", "2024", "Atual", "Posdoc do laboratório de Macroevolução e Macroecologia", "São Paulo, Brasil", "Caracterizando assembleias e coexistencia em tempo profundo"
+)
+```
+
+```{r EDUCATION2}
+posdoc %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    where = glue::glue("{startYear} --> {endYear}",.na = ""),
+    when = where)
+```
+
+
+## Membro de corpo editorial
+
+```{r, eval=T}
+editor <- tribble(
+    ~title, ~year,
+    "Austral Ecology", "2023-Atual",
+    )
+editor %>%
+  detailed_entries(
+    with = title,
+    where= year)
+```
+
+## Revisor de periódico
+
+Revisor de diversos periódicos nacionais e internacionais. [Link para Publons]()
+
+```{r, eval=T}
+review <- tribble(
+    ~title, ~year,
+    "Perspectives in Ecology and Conservation", "2019-Atual",
+    "Journal of Vegetation Science", "2019-Atual", 
+    "Journal of Biogeography", "2020-Atual",
+    "Frontiers in Ecology and Evolution", "2020-Atual",
+    "Ecology and Evolution", "2021-Atual",
+    "Global Ecology and Biogeography", "2021-Atual",
+    "Ecography", "2021-Atual", 
+    "Oecologia Australis", "2021-Atual",
+    "Functional Ecology", "2021-Atual",
+    "Oxford Bibliographies", "2022-Atual",
+    "Frontiers in Plant Sciences", "2022-Atual",
+    "Proceedings of the National Academy of Sciences", "2022-Atual",
+    "PeerJ", "2022-Atual",
+    "Scientific Reports", "2024-Atual",
+    "Methods in Ecology and Evolution", "2024-Atual",
+    "Trends in Ecology and Evolution", "2025-Atual")
+review %>%
+  detailed_entries(
+    with = title,
+    where= year)
+```
+
+## Organização de evento nacional
+
+1. Simpósio de Ecologia Teórica e Reunião da Associação Brasileira de Ecologia. 2016
 
 # Palestras
 
@@ -277,28 +377,6 @@ editor %>%
     where= year)
 ```
 
-## Serviços academicos - revisões
-
-*Revisão para XX revistas científicas. Avaliado como ["Excelent Reviewer"]() na plataforma Publons
-
-*Revisor de projeto de fomento para National Science Poland
-
-```{r, eval=F}
-review <- tribble(
-    ~title, ~year,
-    "Ecography",  "2024",
-    "Austral Ecology",  "2021-2022", 
-    "Global Ecology and Biogeography", "2020",
-    "Methods in Ecology and Evolution", "2014,2019,2021",
-    "PNAS", "2018",
-    "Journal of Biogeography",  "2014",
-    "Biotemas", "2010")
-review %>%
-  detailed_entries(
-    with = title,
-    where= year)
-```
-
 
 # Afiliações em sociedades científicas
 
@@ -323,7 +401,7 @@ lang <- tribble(
   ~lang, ~level, ~detail,
   "Português", "Nativo", "",
   "Inglês", "Avançado", "TOEFL ITP total (2021): 630 of 677",
-  "Spanish", "Intermediário", "")
+  "Espanhol", "Intermediário", "")
 
 lang %>%
   detailed_entries(
@@ -338,7 +416,7 @@ lang %>%
 comp <- tribble(
   ~frequency, ~programs,
   "Diário", "R, Rmarkdown/Quarto, Git, GitHub, bash em servidores para computação em alta performance MacOS/Linux",
-  "Seldom", "Python, HTML, CSS, Latex")
+  "Ocasionalmente", "Python, HTML, CSS, Latex")
 
 comp %>% 
   detailed_entries(

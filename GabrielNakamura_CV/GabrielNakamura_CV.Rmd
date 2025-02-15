@@ -59,7 +59,7 @@ edu <- tribble(
   ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
   "Universidade Federal do Rio Grande do Sul", "2015", "2019", "Doutorado em Ecologia [documento 1]", "Porto Alegre, Brasil", list("Título: Diversidade biológica: problemas, soluções e novas propostas", "Prêmio de melhor tese do PPG Ecologia UFRGS", "Indicação Prêmio Capes de Teses"),
   "Universidade Federal do Mato Grosso do Sul", "2012", "2014", "Mestre em Ecologia e Conservação [documento 2]", "Campo Grande, Brasil", "Título: Comunidade de peixes de riacho: uma abordagem cienciométrica e empírica",
-  "Universidade Federal de Mato Grosso do Sul", "2008", "2011", "Licenciatura em Ciências Biológicas", "Três Lagoas, Brasil", "Ecologia de comunidades de peixes de lagoas marginais"
+  "Universidade Federal de Mato Grosso do Sul", "2008", "2011", "Licenciatura em Ciências Biológicas [documento 3]", "Três Lagoas, Brasil", "Ecologia de comunidades de peixes de lagoas marginais"
 )
 ```
 
@@ -79,10 +79,10 @@ edu %>%
 ```{r}
 fellowship <- award <- tribble(
   ~title, ~unit, ~endYear, ~detail, ~value,
-  "Melhor apresentação oral CBBE", "Sociedade Brasileira de Biologia Evolutiva", 2024, "Prêmio de melhor apresentação oral no I Congresso Brasileiro de Biologia Evolutiva", "sem premiação em dinheiro",
-  "Melhor tese PPG Ecologia UFRGS", "Programa de pós-graduação em Ecologia UFRGS", 2020, "Melhor tese defendida no ano de 2019 no programa de pós graduação em Ecologia da UFRGS", "Indicação ao prêmio CAPES de Teses",
-  "Terceiro colocado no Ebbe Nielsen Prize", "GBIF, Holanda", 2021, "Terceiro colocado no desafio de Ciência de dados utilizando dados da plataforma GBIF", "$5.000 EUR",
-  "Top-downloaded paper Austral Ecology", "Wiley", 2020, "Paper entre um dos mais visualizados na revista Austral Ecology entre o período de 2018-2019", "sem premiação em dinheiro"
+  "Melhor apresentação oral CBBE", "Sociedade Brasileira de Biologia Evolutiva [documento 4]", 2024, "Prêmio de melhor apresentação oral no I Congresso Brasileiro de Biologia Evolutiva", "sem premiação em dinheiro",
+  "Melhor tese PPG Ecologia UFRGS [documento 5]", "Programa de pós-graduação em Ecologia UFRGS", 2020, "Melhor tese defendida no ano de 2019 no programa de pós graduação em Ecologia da UFRGS", "Indicação ao prêmio CAPES de Teses",
+  "Terceiro colocado no Ebbe Nielsen Prize [documento 6]", "GBIF, Holanda", 2021, "Terceiro colocado no desafio de Ciência de dados utilizando dados da plataforma GBIF", "$5.000 EUR",
+  "Top-downloaded paper Austral Ecology [documento 7]", "Wiley", 2020, "Paper entre um dos mais visualizados na revista Austral Ecology entre o período de 2018-2019", "sem premiação em dinheiro"
 )
 ```
 
@@ -107,20 +107,66 @@ fellowship %>%
 
 ## Artigos publicados em periódicos científicos
 
-```{r PEER-REVIEWED, eval=T}
+```{r PEER-REVIEWED, eval=F}
 # esta desatualizado, falta o artigo EcoEvoRxiv
 bibliography_entries("Publications_personal.bib") %>%
   arrange(desc(issued))
 ```
+1. **Nakamura, G.**; CORVALAN, L. ; DE PAULA-SOUZA, LAURA BARRETO ; FRATELES, L. ; TAVARES, GUILHERME ROGIE GONÇALVES ; PEREIRA, J. C. ; SILVA, D. O. ; BARRAGAN-RUIZ, C. ; BRESEGHELLO, F. ; SUZAN, N. ; TARGUETA, C. P. ; TESSAROLO, G. ; TERESA, F. B. ; DIAS, M. S. ; JARDIM, L. ; PINTO, R. B. ; NUNES, R. ; TELLES, M. ; DINIZ FILHO, J. A. F. . Darwinian shortfall and macroecological patterns in genetic data of Tocantins-Araguaia Basin fishes. Neotropical Ichthyology, 2025. [documento 8]
+
+2. ARAUJO, M. L. ; FERREIRA, L. G. S. S. ; **Nakamura, G.** ; COELHO, M. T. P. ; RANGEL, T. . treesliceR: a package for slicing phylogenies and inferring phylogenetic patterns over evolutionary time. ECOGRAPHY, v. 000, p. 000, 2024. [documento 9]
+
+3. FRATELES, LÍVIA ESTÉFANE FERNANDES ; TAVARES, GUILHERME ROGIE GONÇALVES ; **NAKAMURA, GABRIEL** ; DA SILVA, NELSON JORGE ; TERRIBILE, LEVI CARINA ; DINIZ'FILHO, JOSÉ ALEXANDRE F. . The Interaction Between the Linnean and Darwinian Shortfalls Affects Our Understanding of the Evolutionary Dynamics Driving Diversity Patterns of New World Coralsnakes. JOURNAL OF BIOGEOGRAPHY, v. 00, p. 00-00, 2024. [documento 10]
+
+4. **NAKAMURA, GABRIEL**; RODRIGUES, ARTHUR V. ; LUZA, ANDRÉ LUÍS ; MAESTRI, RENAN ; DEBASTIANI, VANDERLEI ; DUARTE, LEANDRO . Herodotools: An R package to integrate macroevolution, biogeography and community ecology. JOURNAL OF BIOGEOGRAPHY, v. 00, p. 00-00, 2023. Citações:5|5 [documento 11]
+
+5. DE PAULA-SOUZA, LAURA BARRETO ; LIMA, DAISY JORGE ; **NAKAMURA, GABRIEL** ; DINIZ-FILHO, JOSÉ ALEXANDRE FELIZOLA . Global patterns and mechanisms shaping dimensionality diversity in sharks. BASIC AND APPLIED ECOLOGY, v. 00, p. 00, 2023. [documento 12]
+
+6. MACHADO, A. F. ; **NAKAMURA, GABRIEL** ; RITTER, C. ; DUARTE, LEANDRO . Spatiotemporal patterns of historical connections between Amazonian and Atlantic forests. BIOLOGICAL JOURNAL OF THE LINNEAN SOCIETY, v. blad12, p. 00-00, 2023. [documento 13]
+
+7. DUARTE, LEANDRO ; **NAKAMURA, GABRIEL** ; DEBASTIANI, VANDERLEI ; MAESTRI, RENAN ; JOÃO RAMOS PEREIRA, MARIA ; CIANCIARUSO, MARCUS ; ALEXANDRE FELIZOLA DINIZ'FILHO, JOSÉ . There and back to the present: a model-based framework to estimate phylogenetically constrained alpha diversity gradients. ECOGRAPHY, v. 00, p. e06544-e06544, 2023. [documento 14]
+
+8. **NAKAMURA, GABRIEL**; SOARES, B. E. . English May Be Science?s Native Language, but It?s Not Native to All Scientists. SCIENTIFIC AMERICAN, v. 00, p. 00, 2023. [documento 15]
+
+9. SOARES, BRUNO E. ; **NAKAMURA, G**. ; FREITAS, TIAGO M.S. ; RICHTER, A. ; CADOTTE, MARC . Quantifying and overcoming Darwinian shortfalls to conserve the fish tree of life. BIOLOGICAL CONSERVATION, v. 285, p. 110223, 2023. [documento 16]
+
+10. **NAKAMURA, GABRIEL**; SOARES, BRUNO ELERES ; PILLAR, VALÉRIO D. ; DINIZ-FILHO, JOSÉ ALEXANDRE FELIZOLA ; DUARTE, LEANDRO . Three pathways to better recognize the expertise of Global South researchers. npj Biodiversity, v. 2, p. 17, 2023. [documento 17]
+
+11. RODRIGUES, ARTHUR VINICIUS ; **NAKAMURA, GABRIEL** ; STAGGEMEIER, VANESSA GRAZIELE ; DUARTE, LEANDRO . Species misidentification affects biodiversity metrics: Dealing with this issue using the new R package naturaList. Ecological Informatics, v. 69, p. 101625, 2022. [documento 18]
+
+12. CARVALHO, FERNANDO GERALDO ; DUARTE, LEANDRO ; SEGER, GUILHERME DUBAL SANTOS ; **NAKAMURA, GABRIEL** ; GUILLERMO-FERREIRA, RHAINER ; CORDERO-RIVERA, ADOLFO ; JUEN, LEANDRO . Detecting Darwinian Shortfalls in the Amazonian Odonata. NEOTROPICAL ENTOMOLOGY, v. xx, p. xx, 2022. [documento 19]
+
+13. **NAKAMURA, GABRIEL**; VICENTIN, WAGNER ; SÚAREZ, YZEL RONDON . Taxonomic and phylogenetic beta diversity in headwater stream fish communities of the Paraná and Paraguai River basins. Neotropical Ichthyology, v. 19, p. e200126, 2021. [documento 20]
+
+14. SOARES, B. E. ; **Nakamura, G.** . Ecologia filogenética de comunidades de peixes de riacho neotropicais. Oecologia Australis, v. 25, p. 448, 2021. [documento 21]
+
+15. DIJK, A. V. ; **Nakamura, G.** ; Rodrigues, AV ; MAESTRI, R. ; DUARTE, L. D. S. . Imprints of tropical niche conservatism and historical dispersal in the radiation of Tyrannidae (Aves: Passeriformes). BIOLOGICAL JOURNAL OF THE LINNEAN SOCIETY, v. XX, p. 1-11, 2021. [documento 22]
+
+16. CARVALHO, F. G. ; DUARTE, L. D. S. ; **NAKAMURA, GABRIEL** ; SEGER, G. D. S. ; JUEN, L. . Changes of Phylogenetic and Taxonomic Diversity of Odonata (Insecta) in Response to Land Use in Amazonia. Forests, v. 12, p. 1061, 2021. [documento 23]
+
+17. **NAKAMURA, GABRIEL**; RICHTER, ALINE ; SOARES, BRUNO E. . FishPhyloMaker: An R package to generate phylogenies for ray-finned fishes. Ecological Informatics, v. 66, p. 101481, 2021. [documento 24]
+
+18. RICHTER, ALINE ; **NAKAMURA, GABRIEL** ; ISERHARD, CRISTIANO ; DUARTE, LEANDRO . The hidden side of diversity: Effects of imperfect detection on multiple dimensions of biodiversity. Ecology and Evolution, v. 11, p. 12508-12519, 2021. [documento 25]
+
+19. **NAKAMURA, GABRIEL**; VICENTIN, WAGNER ; SÚAREZ, YZEL RONDON ; DUARTE, LEANDRO . A multifaceted approach to analyzing taxonomic, functional, and phylogenetic β diversity. ECOLOGY, v. 101, p. e03122, 2020. [documento 26]
+
+20. **NAKAMURA, GABRIEL**; GONÇALVES, LARISSA OLIVEIRA ; DUARTE, LEANDRO DA SILVA . Revisiting the dimensionality of biological diversity. ECOGRAPHY, v. 43, p. 539-548, 2019. [documento 27]
+
+21. **NAKAMURA, GABRIEL**; VICENTIN, WAGNER ; SÚAREZ, YZEL RONDON . Functional and phylogenetic dimensions are more important than the taxonomic dimension for capturing variation in stream fish communities. AUSTRAL ECOLOGY, v. 43, p. 2-12, 2018. [documento 28]
+
+22. SUGAI, L. S. M. ; **Nakamura, G.** ; SUGAI, J. L. M. M. ; SILVA, T. S. F. . SCINAX NASICUS (Lesser Snouted Treefrog). Predation by TRACHYCEPHALUS TYPHONIUS (Canauaru Frog). HERPETOLOGICAL REVIEW, v. 48, p. 2, 2017. [documento 29]
+
 
 ## Preprints
 
 *Artigos abertos hospedados em plataformas de preprint, sem revisão por pares
 
-```{r PREPRINT, eval=T}
+```{r PREPRINT, eval=F}
 bibliography_entries("preprint.bib") %>%
   arrange(desc(issued))
 ```
+
+1. Nakamura G et al. 2024. The macroecology of knowledge: Spatio-temporal patterns of name-bearing types in biodiversity science. EcoEvoArxiv preprints. DOI: https://doi.org/10.32942/X28D1M [documento 30]
 
 ## Capítulos de livros
 
@@ -129,7 +175,7 @@ bibliography_entries("capitulos_livros.bib") %>%
   arrange(desc(issued))
 ```
 
-1. SOUZA, G. N.. Aprender (não) é preciso: predadores necessitam de aprendizado para evitação de presas aposemáticas no Pantanal?. In: Wellington Santos Fava; Claudenice Faxina Zucca; Milena Delatorre; Francisco Valente-Neto; Marciel Elio Rodrigues; Gabriel Arvelino de Paula; Andréa Cardoso de Araújo; Erich Fischer; Fábio de Oliveira Roque; Rudi Ricardo Laps. (Org.). Ecologia do Pantanal. 1ed.Campo Grande: Editora UFMS, 2014, p. 271-279.
+1. SOUZA, G. N.. Aprender (não) é preciso: predadores necessitam de aprendizado para evitação de presas aposemáticas no Pantanal?. In: Wellington Santos Fava; Claudenice Faxina Zucca; Milena Delatorre; Francisco Valente-Neto; Marciel Elio Rodrigues; Gabriel Arvelino de Paula; Andréa Cardoso de Araújo; Erich Fischer; Fábio de Oliveira Roque; Rudi Ricardo Laps. (Org.). Ecologia do Pantanal. 1ed.Campo Grande: Editora UFMS, 2014, p. 271-279. [documento 31]
 
 ## Pacotes estatísticos
 
@@ -151,13 +197,13 @@ bibliography_entries("repo_dados.bib") %>%
 ```{r}
 teach <- tribble(
   ~title, ~unit, ~year, ~where, ~detail,
-    "Professor substituto", "Universidade Federal do Ceará", "2022", "Fortaleza, Brasil", list("Professor das disciplinas de Ecologia Básica, Biogeografia, Ecologia e Legislação Ambiental [doc X]"),
+    "Professor substituto", "Universidade Federal do Ceará", "2022", "Fortaleza, Brasil", list("Professor das disciplinas de Ecologia Básica, Biogeografia, Ecologia e Legislação Ambiental [documento 32]"),
   
-    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade de São Paulo", "2023 & 2024", "São Paulo, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia USP"),
+    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade de São Paulo", "2023 & 2024", "São Paulo, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia USP [documento 33]"),
   
-    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade Federal de Goiás", "2023", "Goiânia, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia e Evolução da UFG"),
+    "Boas Práticas e ferramentas de Ciência Aberta em Ecologia", "Universidade Federal de Goiás", "2023", "Goiânia, Brasil", list("Professor e co-criador da disciplina para estudantes de pós-graduação (mestrado e doutorado) do programa de pós-graduação em Ecologia e Evolução da UFG [documento 34]"),
   
-  "Métodos quantitativos", "Universidade Federal do Rio Grande do Sul", "2016 & 2017", "Porto Alegre, Brazil", list("Colaborador na disciplina de graduação em Ciências Biológicas UFRGS", "2 months (May-June): 4h per week")
+  "Métodos quantitativos", "Universidade Federal do Rio Grande do Sul", "2016 & 2017", "Porto Alegre, Brazil", list("Colaborador na disciplina de graduação em Ciências Biológicas UFRGS [documento 35]", "2 months (May-June): 4h per week")
 )
   
     
@@ -175,29 +221,29 @@ teach %>% slice(1:5) %>%
 
 ## Orientações
 
-1. Lucas Cortez. Como a suficiência amostral e o poder do teste afetam nossa percepção sobre o impacto antrópico na diversidade alfa. Início: 2020. Dissertação (Mestrado em Ecologia) - Universidade Federal do Rio Grande do Sul, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. (Coorientador).
+1. Lucas Cortez. Como a suficiência amostral e o poder do teste afetam nossa percepção sobre o impacto antrópico na diversidade alfa. Início: 2020. Dissertação (Mestrado em Ecologia) - Universidade Federal do Rio Grande do Sul, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. (Coorientador). [documento 36]
 
-2. Lívia Frateles. Global patterns of diversity and knowledge shortfalls in Serpentes. Início: 2024. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. (Coorientador).
+2. Lívia Frateles. Global patterns of diversity and knowledge shortfalls in Serpentes. Início: 2024. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás, Coordenação de Aperfeiçoamento de Pessoal de Nível Superior. (Coorientador). [documento 37]
 
 ## Bancas de defesa
 
-1. NAKAMURA, GABRIEL; VIEIRA, M.. Participação em banca de Luiz Gabriel Ferreira. Modelando os efeitos da história evolutiva na estrutura e papel das espécies em redes mutualísticas. 2023. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás.
+1. NAKAMURA, GABRIEL; VIEIRA, M.. Participação em banca de Luiz Gabriel Ferreira. Modelando os efeitos da história evolutiva na estrutura e papel das espécies em redes mutualísticas. 2023. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás. [documento 38]
 
-2. NAKAMURA, GABRIEL; MEYER, L.. Participação em banca de Livia Frateles. Lacunas Linneana e Darwiniana e padrões espaço-temporais no conhecimento biológico de cobras corais do Novo Mundo (Serpentes: Elapidae). 2023. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás.
+2. NAKAMURA, GABRIEL; MEYER, L.. Participação em banca de Livia Frateles. Lacunas Linneana e Darwiniana e padrões espaço-temporais no conhecimento biológico de cobras corais do Novo Mundo (Serpentes: Elapidae). 2023. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás. [documento 39]
 
-3. Villalobos, F; BINI, L. M.; Nakamura, G.. Participação em banca de Daisy Jorge. VARIAÇÃO GEOGRÁFICA DA DIMENSIONALIDADE DE AVES NA MATA ATLÂNTICA. 2020. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás.
+3. Villalobos, F; BINI, L. M.; Nakamura, G.. Participação em banca de Daisy Jorge. VARIAÇÃO GEOGRÁFICA DA DIMENSIONALIDADE DE AVES NA MATA ATLÂNTICA. 2020. Dissertação (Mestrado em Ecologia e Evolução) - Universidade Federal de Goiás. [documento 40]
 
-4. Nakamura, G.; DUARTE, L. D. S.. Participação em banca de Jhonny Guedes. rends, biases and opportunities in terrestrial vertebrate biodiversity research. 2024. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás.
+4. Nakamura, G.; DUARTE, L. D. S.. Participação em banca de Jhonny Guedes. rends, biases and opportunities in terrestrial vertebrate biodiversity research. 2024. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás. [documento 41]
 
-5. NAKAMURA, GABRIEL; CARVALHO, P.; BORTOLINI, J. C.; LANSAC-TOHA, F. M.. Participação em banca de Gisele Moreira dos Santos. Dimensionalidade da biodiversidade de comunidades de insetos em riachos. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás.
+5. NAKAMURA, GABRIEL; CARVALHO, P.; BORTOLINI, J. C.; LANSAC-TOHA, F. M.. Participação em banca de Gisele Moreira dos Santos. Dimensionalidade da biodiversidade de comunidades de insetos em riachos. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás. [documento 42]
 
-6. Nakamura, G.. Participação em banca de Matheus Moroti. Padrões e processos macroevolutivos na origem e diversificação de vertebrados terrestres da Floresta Atlântica. 2023. Tese (Doutorado em Ecologia e Conservação) - Universidade Federal de Mato Grosso do Sul.
+6. Nakamura, G.. Participação em banca de Matheus Moroti. Padrões e processos macroevolutivos na origem e diversificação de vertebrados terrestres da Floresta Atlântica. 2023. Tese (Doutorado em Ecologia e Conservação) - Universidade Federal de Mato Grosso do Sul. [documento 43]
 
-7. Nakamura, G.. Participação em banca de Matheus Moroti. Padrões e processos macroevolutivos na origem e diversificação de vertebrados terrestres da Floresta Atlântica. 2023. Tese (Doutorado em Ecologia e Conservação) - Universidade Federal de Mato Grosso do Sul.
+7. Nakamura, G.. Participação em banca de Matheus Moroti. Padrões e processos macroevolutivos na origem e diversificação de vertebrados terrestres da Floresta Atlântica. 2023. Tese (Doutorado em Ecologia e Conservação) - Universidade Federal de Mato Grosso do Sul. [documento 44]
 
-8. NAKAMURA, GABRIEL; BANDEIRA, K.; MACIEL, N.; CANDEIRO, C. R. A.. Participação em banca de Livia Motta Gil. LACUNAS DE CONHECIMENTO E PADRÕES MACROECOLÓGICOS EM DINOSSAUROS. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás.
+8. NAKAMURA, GABRIEL; BANDEIRA, K.; MACIEL, N.; CANDEIRO, C. R. A.. Participação em banca de Livia Motta Gil. LACUNAS DE CONHECIMENTO E PADRÕES MACROECOLÓGICOS EM DINOSSAUROS. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás. [documento 45]
 
-9. NAKAMURA, GABRIEL; TERRIBILE, L. C.; PEREIRA, M. J. R.; WEBER, M. M.; Villalobos, F. Participação em banca de Egon Luis Vilela do Valle. Dinâmicas de Nicho e Distribuição Geográfica em Chiroptera. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás.
+9. NAKAMURA, GABRIEL; TERRIBILE, L. C.; PEREIRA, M. J. R.; WEBER, M. M.; Villalobos, F. Participação em banca de Egon Luis Vilela do Valle. Dinâmicas de Nicho e Distribuição Geográfica em Chiroptera. 2023. Tese (Doutorado em Ecologia e Evolução) - Universidade Federal de Goiás. [documento 46]
 
 ## Workshops e Cursos de curta duração
 
@@ -205,7 +251,7 @@ teach %>% slice(1:5) %>%
 workshop <- tribble(
   ~title, ~unit, ~year, ~where, ~detail,
    "Version control using git and GitHub", "University of Toronto", "2023", "workshop remoto",
-  list("Curso de curta duração ministrado para estudantes de pós-graduação da Univerisidade de Toronto, 4h")
+  list("Curso de curta duração ministrado para estudantes de pós-graduação da Univerisidade de Toronto, 4h [documento 47]")
   )
 ```
 
@@ -227,10 +273,10 @@ workshop %>%
 ```{r}
 posdoc <- tribble(
   ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
-  "Universidade Federal do Rio Grande do Sul", "2019", "2020", "Posdoc Laboratório de Ecologia Filogenética e Funcional", "Porto Alegre, Brasil", list("Desenvolvimento de ferramentas numéricas em biogeografia histórica e macroevolução"),
-  "Texas A&M University", "2022", "2023", "Posdoc com financiamento NSF do laboratório de Biogeografia", "Corpus Christi, Estados Unidos", "Desenvolvimento e melhoria do pacote em R phyloregion",
-  "Universidade Federal de Goiás", "2023", "2024", "Posdoc do INCT Ecologia, Evolução e Conservação da Biodiversidade", "Goiânia, Brasil", "Projeto: Investigando lacunas de conhecimento em múltiplas dimensões da diversidade",
-  "Universidade de São Paulo", "2024", "Atual", "Posdoc do laboratório de Macroevolução e Macroecologia", "São Paulo, Brasil", "Caracterizando assembleias e coexistencia em tempo profundo"
+  "Universidade Federal do Rio Grande do Sul", "2019", "2020", "Posdoc Laboratório de Ecologia Filogenética e Funcional [documento 48]", "Porto Alegre, Brasil", list("Desenvolvimento de ferramentas numéricas em biogeografia histórica e macroevolução"),
+  "Texas A&M University", "2022", "2023", "Posdoc com financiamento NSF do laboratório de Biogeografia [documento 49]", "Corpus Christi, Estados Unidos", "Desenvolvimento e melhoria do pacote em R phyloregion",
+  "Universidade Federal de Goiás", "2023", "2024", "Posdoc do INCT Ecologia, Evolução e Conservação da Biodiversidade [documento 50]", "Goiânia, Brasil", "Projeto: Investigando lacunas de conhecimento em múltiplas dimensões da diversidade",
+  "Universidade de São Paulo", "2024", "Atual", "Posdoc do laboratório de Macroevolução e Macroecologia [documento 51]", "São Paulo, Brasil", "Caracterizando assembleias e coexistencia em tempo profundo"
 )
 ```
 
@@ -250,7 +296,7 @@ posdoc %>%
 ```{r, eval=T}
 editor <- tribble(
     ~title, ~year,
-    "Austral Ecology", "2023-Atual",
+    "Austral Ecology [documento 52]", "2023-Atual",
     )
 editor %>%
   detailed_entries(
@@ -260,7 +306,7 @@ editor %>%
 
 ## Revisor de periódico
 
-Revisor de diversos periódicos nacionais e internacionais. [Link para Publons]()
+Revisor de diversos periódicos nacionais e internacionais [documentos 53 - 64]
 
 ```{r, eval=T}
 review <- tribble(
@@ -289,93 +335,7 @@ review %>%
 
 ## Organização de evento nacional
 
-1. Simpósio de Ecologia Teórica e Reunião da Associação Brasileira de Ecologia. 2016
-
-# Palestras
-
-```{r}
-inv.talk <- tribble(
-  ~title, ~unit, ~year, ~where,
-  
-)
-
-```
-
-## Palestras como convidado
-
-```{r}
-inv.talk %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    when = where,
-    where= year)
-```
-
-
-# Experiência profissional
-
-## Membro de banca de defesa
-
-```{r}
-jury <- tribble(
-  ~title, ~unit, ~year, ~where,
-  "xxx", "xxx", 2023, "xxx")
-
-jury %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    when = where,
-    where= year)
-```
-
-## Comitê de acompanhamento
-
-```{r}
-committee1 <- tribble(
-  ~title, ~unit, ~year, ~where,
-  "xxx", "xx", "xx", "xx"
-)
-
-committee1 %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    when = where,
-    where= year)
-```
-
-## Comitês universitários
-
-```{r}
-committee2 <- tribble(
-  ~title, ~unit, ~year, ~where,
-  "xxx", "xx", "xx", "xx"
-)
-
-committee2 %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    when = where,
-    where= year)
-```
-
-
-## Membro de corpo editorial
-
-```{r}
-editor <- tribble(
-  ~title, ~unit, ~year,
-  "Austral Ecology", "Editor associado", "2023 - Present")
-
-editor %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    where= year)
-```
+1. Simpósio de Ecologia Teórica e Reunião da Associação Brasileira de Ecologia. 2016 [documento 65]
 
 
 # Afiliações em sociedades científicas
